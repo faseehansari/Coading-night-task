@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Explore</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="./explore.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#" class="nav-logo">
+      <div class="nav-logo-icon">H</div>
+      HelpHub AI
+    </a>
+    <ul class="nav-links">
+      <li><a href="#">Dashboard</a></li>
+      <li><a href="./explore.html">Explore</a></li>
+      <li><a href="./leaderboard.html">Leaderboard</a></li>
+      <li><a href="./notification.html">Notifications</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <p class="hero-breadcrumb">Explore / Feed</p>
+    <h1>Browse help requests with filterable community context.</h1>
+    <p>Filter by category, urgency, skills, and location to surface the best matches.</p>
+  </section>
+
+  <!-- MAIN LAYOUT -->
+  <div class="main-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <p class="sidebar-label">Filters</p>
+      <h2>Refine the feed</h2>
+
+      <div class="filter-group">
+        <label>Category</label>
+        <div class="select-wrapper">
+          <select>
+            <option>All categories</option>
+            <option>Web Development</option>
+            <option>Design</option>
+            <option>Career</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="filter-group">
+        <label>Urgency</label>
+        <div class="select-wrapper">
+          <select>
+            <option>All urgency levels</option>
+            <option>High</option>
+            <option>Medium</option>
+            <option>Low</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="filter-group">
+        <label>Skills</label>
+        <input type="text" placeholder="React, Figma, Git/GitHub" />
+      </div>
+
+      <div class="filter-group">
+        <label>Location</label>
+        <input type="text" placeholder="Karachi, Lahore, Remote" />
+      </div>
+    </aside>
+
+    <!-- FEED -->
+    <main class="feed">
+
+      <!-- Card 1 -->
+      <div class="card">
+        <div class="card-badges">
+          <span class="badge badge-web">Web Development</span>
+          <span class="badge badge-high">High</span>
+          <span class="badge badge-solved">Solved</span>
+        </div>
+        <h3>Need help</h3>
+        <p class="card-desc">helpn needed</p>
+        <div class="card-footer">
+          <div class="card-author">
+            <strong>Ayesha Khan</strong>
+            <span>Karachi • 1 helper interested</span>
+          </div>
+          <button class="btn-details">Open details</button>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="card">
+        <div class="card-badges">
+          <span class="badge badge-web">Web Development</span>
+          <span class="badge badge-high">High</span>
+          <span class="badge badge-solved">Solved</span>
+        </div>
+        <h3>Need help making my portfolio responsive before demo day</h3>
+        <p class="card-desc">My HTML/CSS portfolio breaks on tablets and I need layout guidance before tomorrow evening.</p>
+        <div class="skill-tags">
+          <span class="skill-tag">HTML/CSS</span>
+          <span class="skill-tag">Responsive</span>
+          <span class="skill-tag">Portfolio</span>
+        </div>
+        <div class="card-footer">
+          <div class="card-author">
+            <strong>Sara Noor</strong>
+            <span>Karachi • 1 helper interested</span>
+          </div>
+          <button class="btn-details">Open details</button>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="card">
+        <div class="card-badges">
+          <span class="badge badge-design">Design</span>
+          <span class="badge badge-medium">Medium</span>
+          <span class="badge badge-open">Open</span>
+        </div>
+        <h3>Looking for Figma feedback on a volunteer event poster</h3>
+        <p class="card-desc">I have a draft poster for a campus community event and want sharper hierarchy, spacing, and CTA copy.</p>
+        <div class="skill-tags">
+          <span class="skill-tag">Figma</span>
+          <span class="skill-tag">Poster</span>
+          <span class="skill-tag">Design Review</span>
+        </div>
+        <div class="card-footer">
+          <div class="card-author">
+            <strong>Ayesha Khan</strong>
+            <span>Lahore • 1 helper interested</span>
+          </div>
+          <button class="btn-details">Open details</button>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="card">
+        <div class="card-badges">
+          <span class="badge badge-career">Career</span>
+          <span class="badge badge-low">Low</span>
+          <span class="badge badge-solved">Solved</span>
+        </div>
+        <h3>Need mock interview support for internship applications</h3>
+        <p class="card-desc">Applying to frontend internships and need someone to practice behavioral and technical interview questions with me.</p>
+        <div class="skill-tags">
+          <span class="skill-tag">Interview Prep</span>
+          <span class="skill-tag">Career</span>
+          <span class="skill-tag">Frontend</span>
+        </div>
+        <div class="card-footer">
+          <div class="card-author">
+            <strong>Sara Noor</strong>
+            <span>Remote • 2 helpers interested</span>
+          </div>
+          <button class="btn-details">Open details</button>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+</body>
+</html>

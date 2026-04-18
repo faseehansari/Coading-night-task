@@ -1,0 +1,223 @@
+    *, *::before, *::after {
+         box-sizing: border-box;
+          margin: 0;
+           padding: 0;
+         }
+
+    :root {
+      --bg: #f0ebe3;
+      --card-bg: #ffffff;
+      --dark-hero: #2b3330;
+      --teal: #3a9e8f;
+      --text-primary: #1a1a1a;
+      --text-secondary: #8a8a8a;
+      --border: #e8e2d9;
+      --unread-label: #1a1a1a;
+      --read-label: #b0a99e;
+      --nav-active-bg: #d4cfc8;
+      --font-display: 'Syne', sans-serif;
+      --font-body: 'DM Sans', sans-serif;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background-color: var(--bg);
+      min-height: 100vh;
+      color: var(--text-primary);
+    }
+
+    /* ── NAVBAR ── */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: var(--dark-hero);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 40px;
+      height: 56px;
+    }
+
+    .navbar-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .brand-icon {
+      width: 32px;
+      height: 32px;
+      background: var(--teal);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-display);
+      font-size: 15px;
+      font-weight: 800;
+      color: #fff;
+    }
+
+    .brand-name {
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 15px;
+      color: #ffffff;
+    }
+
+    .navbar-links {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .navbar-links a {
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      color: #ccc;
+      padding: 6px 16px;
+      border-radius: 20px;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .navbar-links a:hover {
+      color: #fff;
+    }
+
+    .navbar-links a.active {
+      background: var(--nav-active-bg);
+      color: var(--text-primary);
+    }
+
+    /* ── HERO SECTION (below navbar) ── */
+    .hero {
+      margin-top: 56px; /* push below fixed navbar */
+      background: var(--dark-hero);
+      padding: 48px 40px 52px;
+    }
+
+    .hero-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      color: #8a9e99;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(32px, 5vw, 52px);
+      font-weight: 800;
+      color: #ffffff;
+      line-height: 1.1;
+      max-width: 560px;
+    }
+
+    /* ── MAIN CONTENT ── */
+    .main {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 24px;
+    }
+
+    .feed-card {
+      background: var(--card-bg);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+    }
+
+    .feed-header {
+      padding: 32px 36px 20px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .feed-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      color: var(--teal);
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .feed-title {
+      font-family: var(--font-display);
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--text-primary);
+    }
+
+    /* ── NOTIFICATION ITEMS ── */
+    .notification-list {
+      list-style: none;
+    }
+
+    .notification-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 36px;
+      border-bottom: 1px solid var(--border);
+      transition: background 0.15s;
+      cursor: pointer;
+    }
+
+    .notification-item:last-child {
+      border-bottom: none;
+    }
+
+    .notification-item:hover {
+      background: #faf8f5;
+    }
+
+    .notif-content {
+      flex: 1;
+    }
+
+    .notif-title {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text-primary);
+      margin-bottom: 4px;
+      line-height: 1.4;
+    }
+
+    .notif-meta {
+      font-size: 12px;
+      color: var(--text-secondary);
+      font-weight: 400;
+    }
+
+    .notif-badge {
+      flex-shrink: 0;
+      margin-left: 24px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+
+    .notif-badge.unread {
+      color: var(--unread-label);
+    }
+
+    .notif-badge.read {
+      color: var(--read-label);
+    }
+
+    /* ── subtle gradient background on body ── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 10% 0%, rgba(180,210,200,0.25) 0%, transparent 50%),
+        radial-gradient(ellipse at 90% 10%, rgba(240,210,170,0.2) 0%, transparent 50%);
+      pointer-events: none;
+      z-index: -1;
+    }

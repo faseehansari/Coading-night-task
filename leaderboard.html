@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Leaderboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="./leaderboard.css">
+</head>
+<body>
+
+  <!-- ── TOP NAVBAR ── -->
+  <nav>
+    <div class="nav-brand">
+      <div class="nav-logo">H</div>
+      <span class="nav-name">HelpHub AI</span>
+    </div>
+    <div class="nav-links">
+      <a href="#">Dashboard</a>
+      <a href="./explore.html">Explore</a>
+      <a href="./leaderboard.html">Leaderboard</a>
+    </div>
+  </nav>
+
+  <!-- ── PAGE CONTENT ── -->
+  <div class="page">
+
+    <!-- Hero -->
+    <div class="hero">
+      <div class="hero-label">Leaderboard</div>
+      <h1>Recognize the people who keep the community moving.</h1>
+      <p>Trust score, contribution count, and badges create visible momentum for reliable helpers.</p>
+    </div>
+
+    <!-- Two-column grid -->
+    <div class="grid">
+
+      <!-- Rankings Card -->
+      <div class="card">
+        <div class="card-header">
+          <div class="card-label">Top Helpers</div>
+          <div class="card-title">Rankings</div>
+        </div>
+        <div class="card-body">
+          <div class="rank-row">
+            <div class="avatar av-dark">HA</div>
+            <div class="rank-info">
+              <div class="rank-name">#2 Hassan Ali</div>
+              <div class="rank-skills">JavaScript, React, Git/GitHub</div>
+            </div>
+            <div class="rank-stats">
+              <div class="rank-score">88%</div>
+              <div class="rank-contribs">24 contributions</div>
+            </div>
+          </div>
+          <div class="rank-row">
+            <div class="avatar av-orange">SN</div>
+            <div class="rank-info">
+              <div class="rank-name">#3 Sara Noor</div>
+              <div class="rank-skills">Python, Data Analysis</div>
+            </div>
+            <div class="rank-stats">
+              <div class="rank-score">74%</div>
+              <div class="rank-contribs">11 contributions</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Badge System Card -->
+      <div class="card">
+        <div class="card-header">
+          <div class="card-label">Badge System</div>
+          <div class="card-title">Trust and achievement</div>
+        </div>
+        <div class="card-body">
+          <div class="badge-row">
+            <div class="progress-track"><div class="progress-fill bar-a"></div></div>
+          </div>
+          <div class="badge-row">
+            <div class="badge-name">Hassan Ali</div>
+            <div class="badge-tags">Code Rescuer • Bug Hunter</div>
+            <div class="progress-track"><div class="progress-fill bar-b"></div></div>
+          </div>
+          <div class="badge-row">
+            <div class="badge-name">Sara Noor</div>
+            <div class="badge-tags">Community Voice</div>
+            <div class="progress-track"><div class="progress-fill bar-c"></div></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>
