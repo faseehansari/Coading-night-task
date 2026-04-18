@@ -1,12 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <title>Document</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>HelpHub AI Find help faster</title>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <h1>Hello! World</h1>
+
+<!-- ── NAV ── -->
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">
+      <div class="nav-logo-icon">H</div>
+      HelpHub.AI
+    </a>
+    <ul class="nav-links">
+      <li><a href="#" class="active">Home</a></li>
+      <li><a href="#">Explore</a></li>
+      <li><a href="#">Leaderboard</a></li>
+      <li><a href="#">AI Center</a></li>
+    </ul>
+    <div class="nav-right">
+      <span class="nav-community">Join community signals</span>
+      <button class="btn-join">Join the platform</button>
+    </div>
+    <button class="nav-toggle" onclick="toggleMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="nav-mobile-menu" id="mobileMenu">
+  <a href="#">Home</a>
+  <a href="#">Explore</a>
+  <a href="#">Leaderboard</a>
+  <a href="#">AI Center</a>
+  <a href="#">Join community signals</a>
+  <a href="#" style="background:var(--teal);color:white;margin-top:6px;">Join the platform</a>
+</div>
+
+<!-- ── HERO ── -->
+<section class="hero">
+  <div class="hero-left">
+    <p class="hero-eyebrow">EMIT GRAND CODING NIGHT 2024</p>
+    <h1 class="hero-title">Find help faster.<br>Become help that<br>matters.</h1>
+    <p class="hero-desc">HelpHub AI is a community-powered support network for students, mentors, creators, and builders. Ask for help, offer help, track impact, and let AI surface smarter matches across the platform.</p>
+    <div class="hero-btns">
+      <button class="btn-primary">Open product demo</button>
+      <button class="btn-secondary">Post a request</button>
+    </div>
+    <div class="hero-stats">
+      <div class="stat-card">
+        <div class="stat-label">Members</div>
+        <div class="stat-number">384+</div>
+        <div class="stat-desc">Students, mentors, and helpers in the loop.</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Requests</div>
+        <div class="stat-number">72+</div>
+        <div class="stat-desc">Support posts shared across communities.</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Solved</div>
+        <div class="stat-number">69+</div>
+        <div class="stat-desc">Problems resolved through community action.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <div class="yellow-orb"></div>
+    <p class="live-badge">LIVE PRODUCT FEEL</p>
+    <h2 class="hero-right-title">More than a form.<br>More like an<br>ecosystem.</h2>
+    <p class="hero-right-desc">A polished multi-page experience inspired by product platforms, with AI summaries, trust scores, contribution graphs, notifications, and leaderboard momentum built directly in HTML, CSS, JavaScript, and LocalStorage.</p>
+    <div class="feature-list">
+      <div class="feature-item">
+        <h4>AI request intelligence</h4>
+        <p>Auto-categorization, urgency detection, tags, meeting suggestions, and trend reports.</p>
+      </div>
+      <div class="feature-item">
+        <h4>Community trust graph</h4>
+        <p>Backers, helper rankings, trust scores table, and visible contribution history.</p>
+      </div>
+      <div class="feature-item">
+        <div class="feature-percent">100%</div>
+        <p>Top mentors currently active across the sample mentor network.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CORE FLOW ── -->
+<section class="section">
+  <p class="section-eyebrow">CORE FLOW</p>
+  <div class="section-header">
+    <h2 class="section-title">From struggling alone to solving together</h2>
+    <a href="#" class="section-link">Try onboarding AI →</a>
+  </div>
+  <div class="flow-cards">
+    <div class="flow-card">
+      <h3>Ask for help clearly</h3>
+      <p>Create structured requests with category, urgency, AI suggestions, and tags that surface and attract the right people.</p>
+    </div>
+    <div class="flow-card">
+      <h3>Discover the right people</h3>
+      <p>Use the platform feed, helper lists, notifications, and messaging to move quickly once a match happens.</p>
+    </div>
+    <div class="flow-card">
+      <h3>Track real contribution</h3>
+      <p>Trust scores, badges, solved requests, and rankings help the community recognize meaningful support.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── FEATURED REQUESTS ── -->
+<section class="section" style="padding-top: 0;">
+  <p class="section-eyebrow">FEATURED REQUESTS</p>
+  <div class="section-header">
+    <h2 class="section-title">Community problems currently in motion</h2>
+    <a href="#" class="section-link">View full feed →</a>
+  </div>
+  <div class="request-cards">
+    <!-- Card 1 -->
+    <div class="request-card">
+      <div class="tag-row">
+        <span class="tag tag-blue">Web Development</span>
+        <span class="tag tag-red">High</span>
+        <span class="tag tag-green">Solved</span>
+      </div>
+      <div class="req-title">Need help</div>
+      <div class="req-body">No description provided.</div>
+      <div class="req-footer">
+        <div class="req-meta">
+          <span class="req-author">Ayesha Khan</span>
+          <span class="req-sub">Kathmandu • 1 helper interested</span>
+        </div>
+        <button class="btn-open">Open details</button>
+      </div>
+    </div>
+    <!-- Card 2 -->
+    <div class="request-card">
+      <div class="tag-row">
+        <span class="tag tag-blue">Web Development</span>
+        <span class="tag tag-red">High</span>
+        <span class="tag tag-green">Solved</span>
+      </div>
+      <div class="req-title">Need help making my portfolio responsive before demo day</div>
+      <div class="req-body">My HTML/CSS portfolio looks great on desktops and I need guidance on it before demo day. I've been trying...</div>
+      <div class="tag-row" style="margin-top:2px;">
+        <span class="tag tag-gray">HTML/CSS</span>
+        <span class="tag tag-gray">Responsive</span>
+        <span class="tag tag-gray">Portfolio</span>
+      </div>
+      <div class="req-footer">
+        <div class="req-meta">
+          <span class="req-author">Sara Noor</span>
+          <span class="req-sub">Karachi • 1 helper interested</span>
+        </div>
+        <button class="btn-open">Open details</button>
+      </div>
+    </div>
+    <!-- Card 3 -->
+    <div class="request-card">
+      <div class="tag-row">
+        <span class="tag tag-blue">Design</span>
+        <span class="tag tag-gray">Medium</span>
+        <span class="tag tag-teal">Done</span>
+      </div>
+      <div class="req-title">Looking for Figma feedback on a volunteer event poster</div>
+      <div class="req-body">I have a draft poster for a community volunteer event for the weekend, and I'd love some feedback on the hierarchy, spacing, and CTA copy.</div>
+      <div class="tag-row" style="margin-top:2px;">
+        <span class="tag tag-purple">Figma</span>
+        <span class="tag tag-gray">Poster</span>
+        <span class="tag tag-gray">DesignReview</span>
+      </div>
+      <div class="req-footer">
+        <div class="req-meta">
+          <span class="req-author">Ayesha Khan</span>
+          <span class="req-sub">Lahore • 1 helper interested</span>
+        </div>
+        <button class="btn-open">Open details</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  HelpHub AI is built as a premium-feel, multi-page community support product using HTML, CSS, JavaScript, and LocalStorage.
+</footer>
+
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById('mobileMenu');
+    menu.classList.toggle('open');
+  }
+  // close menu on outside click
+  document.addEventListener('click', function(e) {
+    const menu = document.getElementById('mobileMenu');
+    const toggle = document.querySelector('.nav-toggle');
+    if (!menu.contains(e.target) && !toggle.contains(e.target)) {
+      menu.classList.remove('open');
+    }
+  });
+</script>
 </body>
 </html>
