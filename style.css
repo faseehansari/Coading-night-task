@@ -96,6 +96,10 @@
     font-size: 12px; color: var(--text-muted); cursor: pointer;
     white-space: nowrap;
   }
+  .one a{
+    color: white;
+    text-decoration: none;
+  }
   .btn-join {
     background: var(--teal);
     color: white;
@@ -107,6 +111,14 @@
     cursor: pointer;
     white-space: nowrap;
     transition: background 0.15s;
+  }
+  .btn-join a{
+    color: white;
+    text-decoration: none;
+  }
+  .nav-community a{
+    color: var(--text-muted);
+    text-decoration: none;
   }
   .btn-join:hover { background: var(--teal-light); }
   .nav-mobile-menu{

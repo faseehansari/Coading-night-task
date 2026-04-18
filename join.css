@@ -1,0 +1,226 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #dff0e8 0%, #f5f0e8 50%, #f0e0cc 100%);
+      min-height: 100vh;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 48px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-icon {
+      width: 38px;
+      height: 38px;
+      background: #1a7a6a;
+      border-radius: 9px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-weight: 700;
+      font-size: 17px;
+    }
+
+    .logo-name {
+      font-size: 16px;
+      font-weight: 600;
+      color: #222;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+    }
+
+    .nav-links a {
+      font-size: 14px;
+      color: #555;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .nav-links a:hover {
+      color: #111;
+    }
+
+    .content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      padding: 28px 48px 48px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    /* Left Dark Card */
+    .left-card {
+      background: #1e3d38;
+      border-radius: 20px;
+      padding: 44px 40px;
+      color: #fff;
+    }
+
+    .tag {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 2.5px;
+      color: #7bbfb5;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .left-card h1 {
+      font-size: 34px;
+      font-weight: 800;
+      line-height: 1.2;
+      color: #fff;
+      margin-bottom: 18px;
+    }
+
+    .left-card p {
+      font-size: 14px;
+      color: #a8c8c4;
+      line-height: 1.75;
+      margin-bottom: 24px;
+    }
+
+    .left-card ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .left-card ul li {
+      font-size: 13.5px;
+      color: #a8c8c4;
+      padding-left: 18px;
+      position: relative;
+      line-height: 1.55;
+    }
+
+    .left-card ul li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: #5abfaa;
+      font-size: 16px;
+    }
+
+    /* Right White Card */
+    .right-card {
+      background: #fff;
+      border-radius: 20px;
+      padding: 44px 40px;
+      box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+    }
+
+    .form-tag {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: #1a9a7a;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    .right-card h2 {
+      font-size: 28px;
+      font-weight: 800;
+      color: #111;
+      margin-bottom: 32px;
+      line-height: 1.25;
+    }
+
+    .field {
+      margin-bottom: 20px;
+    }
+
+    .field label {
+      display: block;
+      font-size: 13px;
+      font-weight: 500;
+      color: #555;
+      margin-bottom: 8px;
+    }
+
+    .field select,
+    .field input {
+      width: 100%;
+      padding: 12px 16px;
+      border: 1.5px solid #ddd;
+      border-radius: 10px;
+      font-size: 14px;
+      color: #222;
+      background: #fff;
+      outline: none;
+      appearance: none;
+      -webkit-appearance: none;
+      transition: border-color 0.2s;
+    }
+
+    .field select {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23888' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 16px center;
+      padding-right: 40px;
+    }
+
+    .field select:focus,
+    .field input:focus {
+      border-color: #1a9a7a;
+      box-shadow: 0 0 0 3px rgba(26, 154, 122, 0.14);
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .btn {
+      width: 100%;
+      padding: 14px;
+      background: #1a9a7a;
+      color: #fff;
+      border: none;
+      border-radius: 12px;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: 10px;
+      letter-spacing: 0.2px;
+      transition: background 0.2s, transform 0.1s;
+    }
+
+    .btn:hover {
+      background: #158a6c;
+    }
+
+    .btn:active {
+      transform: scale(0.99);
+    }
+
+    @media (max-width: 768px) {
+      .content {
+        grid-template-columns: 1fr;
+        padding: 20px;
+      }
+      .two-col {
+        grid-template-columns: 1fr;
+      }
+      nav {
+        padding: 16px 20px;
+      }
+    }
